@@ -2,13 +2,291 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
   <title>Kamirisu</title>
 
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 
 <body>
-  <h1>KAMIRISU</h1>
+  <div id="vt-site">
+
+    <div class="vt-white-bg"></div>
+
+    <div class="vt-background vt-background-a"></div>
+    <div class="vt-background vt-background-b"></div>
+
+    <div class="vt-light"></div>
+    <div class="vt-shade"></div>
+
+    <div class="vt-text">
+
+      <!-- HOME -->
+      <section
+        class="vt-page is-active"
+        data-page="home"
+      >
+        <div class="vt-small-title"></div>
+
+        <img
+          class="vt-logo"
+          src="https://res.cloudinary.com/jcbjstmz/image/upload/v1785428992/kamirisu_black_and_sparks_fl4v9w.png"
+          alt="Kamirisu logo"
+        >
+
+        <p>
+          READY TO GET ZAPPED?<br>
+          IT WILL ONLY COST YOUR NUTS.
+        </p>
+      </section>
+
+      <!-- ABOUT -->
+      <section
+        class="vt-page"
+        data-page="about"
+      >
+        <div class="vt-small-title">
+          CHARACTER PROFILE
+        </div>
+
+        <h2>ABOUT ELLY / LORE</h2>
+
+        <p>
+          Write your VTuber biography, lore, personality,
+          powers and interests here.
+        </p>
+      </section>
+
+      <!-- ROLEPLAY AUDIOS -->
+      <section
+        class="vt-page"
+        data-page="audios"
+      >
+        <div class="vt-small-title">
+          IMMERSIVE AUDIO EXPERIENCES
+        </div>
+
+        <h2>ROLEPLAY AUDIOS [R18]</h2>
+
+        <p>
+          Discover my immersive roleplay audios on Patreon and Fansly.
+        </p>
+      </section>
+
+      <!-- ALL SOCIALS -->
+      <section
+        class="vt-page"
+        data-page="socials"
+      >
+        <div class="vt-small-title">
+          FIND ME ONLINE
+        </div>
+
+        <h2>ALL SOCIALS</h2>
+
+        <div class="vt-socials">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            TWITCH
+          </a>
+
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            YOUTUBE
+          </a>
+
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            PATREON
+          </a>
+
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            FANSLY
+          </a>
+
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            X / TWITTER
+          </a>
+
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            DISCORD
+          </a>
+        </div>
+      </section>
+
+      <!-- ARTSYBELLE -->
+      <section
+        class="vt-page"
+        data-page="artsybelle"
+      >
+        <div class="vt-small-title">
+          CREATIVE WORK
+        </div>
+
+        <h2>ARTSYBELLE</h2>
+
+        <p>
+          Explore my illustrations, concept art, animations,
+          character designs and behind-the-scenes artwork.
+        </p>
+      </section>
+
+      <!-- CREDITS -->
+      <section
+        class="vt-page"
+        data-page="credits"
+      >
+        <div class="vt-small-title">
+          THE PEOPLE BEHIND THE DEBUT
+        </div>
+
+        <h2>CREDITS</h2>
+
+        <div class="vt-credits-list">
+          <p>
+            <strong>Character Design</strong><br>
+            Coming Soon
+          </p>
+
+          <p>
+            <strong>Live2D Rigging</strong><br>
+            Coming Soon
+          </p>
+
+          <p>
+            <strong>Logo Design</strong><br>
+            Coming Soon
+          </p>
+
+          <p>
+            <strong>Background Art</strong><br>
+            Coming Soon
+          </p>
+
+          <p>
+            <strong>Animations</strong><br>
+            Coming Soon
+          </p>
+
+          <p>
+            <strong>Music</strong><br>
+            Coming Soon
+          </p>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section
+        class="vt-page"
+        data-page="contact"
+      >
+        <div class="vt-small-title">
+          BUSINESS &amp; COLLABORATIONS
+        </div>
+
+        <h2>CONTACT</h2>
+
+        <p>
+          Reach out for sponsorships, collaborations
+          or professional inquiries.
+        </p>
+
+        <form class="vt-contact-form">
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+          >
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+          >
+
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            required
+          >
+
+          <textarea
+            name="message"
+            rows="6"
+            placeholder="Your Message"
+            required
+          ></textarea>
+
+          <button type="submit">
+            Send Message
+          </button>
+        </form>
+      </section>
+
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav
+      class="vt-navigation"
+      aria-label="Main navigation"
+    >
+      <button
+        class="is-active"
+        type="button"
+        data-page="home"
+      >
+        HOME
+      </button>
+
+      <button
+        type="button"
+        data-page="about"
+      >
+        ABOUT ELLY / LORE
+      </button>
+
+      <button
+        type="button"
+        data-page="audios"
+      >
+        ROLEPLAY AUDIOS [R18]
+      </button>
+
+      <button
+        type="button"
+        data-page="socials"
+      >
+        ALL SOCIALS
+      </button>
+
+      <button
+        type="button"
+        data-page="artsybelle"
+      >
+        ARTSYBELLE
+      </button>
+
+      <button
+        type="button"
+        data-page="credits"
+      >
+        CREDITS
+      </button>
+
+      <button
+        type="button"
+        data-page="contact"
+      >
+        CONTACT
+      </button>
+    </nav>
+
+  </div>
 </body>
 </html>

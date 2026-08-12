@@ -450,7 +450,12 @@ But She likes it.
             or professional inquiries.
           </p>
 
-          <form class="vt-contact-form">
+          <form class="vt-contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+            <p style="display:none;">
+              <label>Don't fill this out: <input name="bot-field"></label>
+            </p>
+
             <input
               type="text"
               name="name"

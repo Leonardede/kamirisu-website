@@ -757,9 +757,16 @@ textarea:focus-visible {
 }
 
 @media (max-width: 720px) {
+
+  :root {
+    --nav-h: 128px;
+  }
+
   body,
   #vt-site {
+    height: 100vh;
     height: 100dvh;
+    width: 100%;
   }
 
   .vt-site-seam {
@@ -770,41 +777,60 @@ textarea:focus-visible {
   .vt-background-b {
     background-position: 62% 22%;
     background-size: 190% auto;
-    opacity: .9;
   }
 
-  .vt-white-bg {
+  .vt-background-a,
+  .vt-light {
+    animation: none;
+    will-change: auto;
+  }
+
+  #vt-site:not(:has(.vt-page[data-page="home"].is-active)) .vt-shade {
     background: linear-gradient(
       180deg,
-      rgba(246, 245, 242, 0.35) 0%,
-      rgba(246, 245, 242, 0.92) 58%,
-      var(--c-bg) 78%
+      rgba(246, 245, 242, 0.85) 0%,
+      rgba(246, 245, 242, 0.95) 25%,
+      var(--c-bg) 50%
     );
   }
 
   .vt-text {
-    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: var(--nav-h);
     width: 100%;
     min-width: 0;
     height: auto;
-    top: auto;
-    bottom: 132px;
-    justify-content: flex-end;
-    padding: var(--sp-3) var(--sp-3) var(--sp-2);
+    display: block;
+    padding: 0;
   }
 
   .vt-page {
-    position: absolute;
+    top: var(--sp-4);
+    bottom: 0;
     left: var(--sp-3);
     right: var(--sp-3);
-    top: auto;
-    bottom: 0;
-    transform: none;
-    max-height: 46vh;
+    max-height: none;
+    display: flex;
+    flex-direction: column;
   }
 
-  .vt-page.is-active {
-    transform: none;
+  .vt-page > :not(.vt-page-body) {
+    flex: 0 0 auto;
+  }
+
+  .vt-page-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--sp-5);
+  }
+
+  .vt-page[data-page="home"] {
+    justify-content: flex-end;
   }
 
   .vt-logo {
@@ -815,11 +841,46 @@ textarea:focus-visible {
 
   .vt-page h2 {
     font-size: clamp(1.8rem, 9vw, 2.4rem);
+    margin-bottom: var(--sp-2);
   }
 
   .vt-page p {
-    font-size: .9rem;
+    font-size: .95rem;
     max-width: none;
+  }
+
+  .vt-inline-img,
+  .vt-inline-img.is-float-right,
+  .vt-inline-img.is-float-left {
+    float: none;
+    width: 100%;
+    margin: var(--sp-3) 0;
+  }
+
+  .vt-inline-img-row {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: var(--sp-1);
+  }
+
+  .vt-inline-img-row .vt-inline-img {
+    flex: 0 0 68%;
+    scroll-snap-align: center;
+  }
+
+  .vt-facts-list .vt-fact {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .vt-facts-list .vt-fact-value {
+    text-align: left;
+  }
+
+  .vt-live-badge {
+    margin-top: var(--sp-2);
+    font-size: .62rem;
+    padding: 4px 10px;
   }
 
   .vt-navigation {
@@ -827,22 +888,19 @@ textarea:focus-visible {
     right: 0;
     bottom: 0;
     padding: var(--sp-2) var(--sp-3);
-    background: linear-gradient(0deg, var(--c-bg) 60%, transparent);
-
+    background: linear-gradient(0deg, var(--c-bg) 65%, transparent);
     flex-direction: row;
     flex-wrap: wrap;
-    gap: var(--sp-2);
+    gap: 0 var(--sp-3);
   }
 
   .vt-navigation button {
-    font-size: .78rem;
-    padding-left: 34px;
+    font-size: .85rem;
+    padding: 8px 0 8px 30px;
   }
 
-  .vt-live-badge {
-    margin-top: var(--sp-2);
-    font-size: .62rem;
-    padding: 4px 10px;
+  #vt-site:has(.vt-page[data-page="home"].is-active) .vt-navigation button {
+    color: var(--c-ink);
   }
 }
 

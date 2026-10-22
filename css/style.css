@@ -108,7 +108,7 @@ ul, ol {
 
 .vt-background-a {
   z-index: 1;
-  background-image: url('https://res.cloudinary.com/jcbjstmz/image/upload/v1785329822/webely_gu90xp.jpg');
+  background-image: url('../images/hero.jpg');
   background-repeat: no-repeat;
   inset: -140px;
   background-position: -100% 100%;
@@ -632,15 +632,18 @@ section[data-page="home"] p {
 }
 
 .vt-navigation button::before {
-  content: '';
+  content: '\f0e7';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: var(--c-pink);
   position: absolute;
   left: 2px;
   top: 50%;
   width: 22px;
   height: 22px;
-  background-image: url('https://res.cloudinary.com/jcbjstmz/image/upload/v1785531906/thunderbolt1_-_Copy_txgy4t.png');
-  background-size: contain;
-  background-repeat: no-repeat;
   transform: translateY(-50%) scale(.4) rotate(-12deg);
   opacity: 0;
   transition: transform var(--dur-fast) var(--ease-smooth), opacity var(--dur-fast) var(--ease-smooth);
@@ -1085,3 +1088,37 @@ textarea:focus-visible {
 .vt-social-btn.is-throne     { background: #7c3aed; }
 .vt-social-btn.is-commissions { background: var(--c-pink); }
 .vt-social-btn.is-asmr       { background: var(--c-purple); }
+
+.vt-bolt-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  width: min(260px, 60%);
+  margin: 0 auto var(--sp-4);
+  padding: 16px 24px;
+  background: #000000;
+  border-radius: 10px;
+  font-family: var(--f-display);
+  font-size: 1.4rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  transition: transform var(--dur-fast) var(--ease-smooth), box-shadow var(--dur-fast) var(--ease-smooth);
+}
+
+.vt-bolt-btn i {
+  font-size: 1.2rem;
+}
+
+.vt-bolt-btn.is-patreon-btn {
+  color: var(--c-pink);
+}
+
+.vt-bolt-btn.is-fansly-btn {
+  color: #1a9bff;
+}
+
+.vt-bolt-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 18px currentColor;
+}

@@ -1,5 +1,5 @@
 const heroArtwork = new Image();
-heroArtwork.src = "https://res.cloudinary.com/jcbjstmz/image/upload/v1785329822/webely_gu90xp.jpg";
+heroArtwork.src = "images/hero.jpg";
 
 const site = document.getElementById("vt-site");
 
